@@ -21,7 +21,7 @@ function wheel(state = initialWheelState, action) {
 
     case MOVE_COUNTERCLOCKWISE: 
       return({
-          activeCog: state.activeCog === 0 ? 5 : state.activeCog -= 1
+          activeCog: state.activeCog === 0  ? 5 : state.activeCog -= 1
       })
 
     default: 

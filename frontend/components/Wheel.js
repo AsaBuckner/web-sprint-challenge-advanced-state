@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import {moveClockwise, moveCounterClockwise} from '../state/action-creators'
-import axios from 'axios'
+
 
 const mapStateToProps = state => {
   
@@ -20,14 +20,16 @@ const cogID = [
 
 function Wheel(props) {
 
-const {activeCog} = props
+const {activeCog,moveClockwise,moveCounterClockwise} = props
 
 const handleClockwise= () => {
-  props.moveClockwise();
+  moveClockwise();
+  console.log(activeCog)
 }
 
 const handleCounterClockwise= () => {
-  props.moveCounterClockwise()
+  moveCounterClockwise()
+  console.log(activeCog)
 }
 
 

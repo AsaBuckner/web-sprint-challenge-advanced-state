@@ -111,7 +111,7 @@ export function postQuiz(newQ,Q) {
     .then((res)=>{
       console.log(res)
       // - Dispatch the correct message to the the appropriate state
-      dispatch(setMessage(`Congrats: ${Q} is a great question!`))
+      dispatch(setMessage(`Congrats: "${Q}" is a great question!`))
     })
     .finally(()=>{
       // - Dispatch the resetting of the form
