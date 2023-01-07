@@ -22,15 +22,6 @@ function Wheel(props) {
 
 const {activeCog,moveClockwise,moveCounterClockwise} = props
 
-const handleClockwise= () => {
-  moveClockwise();
-  console.log(activeCog)
-}
-
-const handleCounterClockwise= () => {
-  moveCounterClockwise()
-  console.log(activeCog)
-}
 
 
   return (
@@ -49,8 +40,8 @@ const handleCounterClockwise= () => {
         
       </div>
       <div id="keypad">
-        <button onClick={handleCounterClockwise} id="counterClockwiseBtn" >Counter clockwise</button>
-        <button onClick={handleClockwise} id="clockwiseBtn">Clockwise</button>
+        <button onClick={()=>moveCounterClockwise()} id="counterClockwiseBtn" >Counter clockwise</button>
+        <button onClick={()=>moveClockwise()} id="clockwiseBtn">Clockwise</button>
       </div>
     </div>
   )

@@ -14,13 +14,16 @@ function wheel(state = initialWheelState, action) {
   
   switch(action.type){
 
-    case MOVE_CLOCKWISE: 
+    case MOVE_CLOCKWISE:
+      console.log(state.activeCog) 
       return({
-          ...state, activeCog: state.activeCog === 5 ? 0 : state.activeCog += 1
+          ...state, activeCog: state.activeCog + 1 > 5 ? 0 : state.activeCog + 1
       });
 
     case MOVE_COUNTERCLOCKWISE: 
+      console.log(state.activeCog)
       return({
+        
           activeCog: state.activeCog === 0  ? 5 : state.activeCog -= 1
       })
 
